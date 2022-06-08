@@ -26,13 +26,14 @@ header {
     background-color: var(--color-pastel-green);
     height: 90px;
     display: flex;
-    padding: 10px;
+    padding: 12px;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.226);
 }
 
 .container{
     width: 100%;
     max-width: 990px;
+    margin: 0 auto;
 }
 
 header nav {
@@ -41,6 +42,7 @@ header nav {
     align-items: center;
     color: var(--color-white);
 }
+
 header ul{
     display: none;
 }
@@ -119,6 +121,7 @@ header img {
     height: 67px;
     font-size: 18px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 #games {
@@ -215,7 +218,7 @@ header img {
 }
 
 #ctrl-platform {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 #ctrl-platform input, label {
@@ -223,6 +226,14 @@ header img {
 }
 
 #ctrl-platform input[type="radio"] {
+    transform: scale(1.5);
+}
+
+.checkbox input {
+    margin-right: 9px;
+}
+
+.checkbox input[type="checkbox"] {
     transform: scale(1.5);
 }
 
@@ -266,4 +277,83 @@ footer {
     align-items: center;
     text-align: center;
     justify-content: space-around;
+}
+
+@media screen and (min-width: 768px) {
+    header nav {
+        align-items: center;
+        color: var(--color-white);
+    }
+
+    header ul{
+        display: flex;
+    }
+
+    header li{
+        list-style-type: none;
+        margin-right: 29px;
+    }
+
+    .list-container {
+        display: flex;
+        align-items: center;
+    }
+
+    #news h2 {
+        font-size: 36px;
+        color: var(--color-grey);
+        margin-bottom: 40px;
+    }
+
+    .news-card {
+        padding: 16px 40px;
+        margin-bottom: 40px;
+    }
+
+    .news-card h3 {
+        font-size: 24px;
+    }
+
+    .news-card h4 {
+        font-size: 16px;
+    }
+
+    #games h2{
+        font-size: 36px;
+    }
+    
+    .games-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .game-card{
+        margin: 30px 15px;
+    }
+
+    #form h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    #form form {
+        margin: 0 auto;
+        max-width: 790px;
+        padding: 50px 70px;
+    }
+
+    .buttons-container {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    footer {
+        height: 190px;
+        padding: 30px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
